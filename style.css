@@ -1,0 +1,27 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.container-fluid{
+    background: url(imgs/abstract-1-sharon-cummings.jpg);
+    background-size: cover;
+    text-align: justify;
+    color: whitesmoke;    
+}
+.myform{
+    max-width: 600px;
+    margin: auto;
+    padding: 0 10px;
+    overflow: hidden;
+}
+.myform input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 16px 0;
+    border: 0;
+    background: #000;
+    color: #fff;
+    padding: 20px 40px;
+}
