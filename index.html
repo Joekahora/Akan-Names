@@ -14,7 +14,7 @@
 <body>
     <div class="container">
         <div class="row">
-            <h1 class="heading">Hi and welcome to Akan Names</h1>
+            <h1 class="heading">Akan Names</h1>
             <p class="text">This web application requires you to input 
                 your date of birth calculating the day of the week you were born
                 and select your gender from the form below
@@ -24,83 +24,40 @@
             </p>
             <form id="form">
                 Enter Day:<br>
-                <input type="text" name="day"><br>
+                <input type="number" name="day" min="1" max="31"><br>
                 Enter Month:<br>
-                <input type="text" name="month"><br>
+                <input type="number" name="month" min="1" max="12"><br>
                 Enter Year:<br>
-                <input type="text" name="year"><br>
+                <input type="number" name="year"><br>
                 Choose your Gender: <br>
-                <input type="radio" value="Male" name="gender" checked> Male<br>
-                <input type="radio" value="Female" name="gender"> Female <br>
+                <input type="radio" value="Male" name="gender" id="Male"> Male<br>
+                <input type="radio" value="Female" name="gender" id="Female"> Female <br>
                 <input type="submit" value="Submit"> 
             </form>
-            <p id="result"></p>
+            <script>
+                var form = document.getElementById("form").onsubmit =function akanName(){
+                    var dd = parseInt(document.getElementsByName("day"));
+                    if (dd>=1 || dd<=31){
+                        return cc+yy+mm;
+                    }
+                    else {
+                        alert("Input a Valid Day");
+                    }
+                    var mm = parseInt(document.getElementsByName("month"));
+                    if (mm>=1 || mm<=12){
+                        return (26*(mm+1)/10);
+                    }
+                    else{
+                        alert("Input A Valid Month");
+                    }
+                    var yearInput = parseInt(document.getElementsByName("year"));
+                    var cc = (yearInput.slice(0,2)/4 - 2*yearInput.slice(0,2)-1);
+                    var yy = (5*yearInput.slice(-2)/4);
+                    var genderValue = document.getElementsByName("gender");
+                    var akanMaleNames = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
+                };
+            </script>
         </div>
-        <script>
-            var form = document.getElementById("form");
-            var birthDay = parseInt(document.getElementsByName("day"));
-            var birthMonth = parseInt(document.getElementsByName("month"));
-            var birthYear = parseInt(document.getElementsByName("year"));
-            var genderValue = document.getElementsByName("gender");
-            var akanMaleNames = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
-            var akanFemaleNames = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
-            var results = document.getElementById("result");
-
-            function dayOfTheWeek(validDay, invalidDay, validMonth, invalidMonth,inputValue) {                
-                if (validDay >= 1 || validDay <= 31 && validMonth>= 1 || validMonth <= 12) {
-                        return results(inputValue = (((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD) % 7); 
-                    } 
-                    else if (invalidDay <=0 || invalidDay> 31 && invalidMonth <= 0 || invalidMonth> 12) {
-                            return results.innerHTML("Invalid Day or Month Entered.");
-                            }
-            }
-            function akanMaleName(inputValue, akanMaleNames, genderValue){
-                if (inputValue === 0 && genderValue === "Male" && akanMaleNames === [0]) {
-                return alert("Your Akan Name is " + akanMaleNames);
-                }
-                else if (inputValue === 1 && genderValue === "Male" && akanMaleNames === [1]) {
-                return alert("Your Akan Name is " + akanMaleNames);
-                }
-                else if (inputValue === 2 && genderValue === "Male" && akanMaleNames === [2]) {
-                return alert("Your Akan Name is " + akanMaleNames);
-                }
-                else if (inputValue === 3 && genderValue === "Male" && akanMaleNames === [3]) {
-                return alert("Your Akan Name is " + akanMaleNames);
-                }
-                else if (inputValue === 4 && genderValue === "Male" && akanMaleNames === [4]) {
-                return alert("Your Akan Name is " + akanMaleNames);
-                }
-                else if (inputValue === 5 && genderValue === "Male" && akanMaleNames === [5]) {
-                return alert("Your Akan Name is " + akanMaleNames);
-                }
-                else if (inputValue === 6 && genderValue === "Male" && akanMaleNames === [7]) {
-                return alert("Your Akan Name is " + akanMaleNames);
-                }
-            }
-            function akanFemaleNames(inputValue, genderValue, akanFemaleNames){
-                if (inputValue === 0 && genderValue === "Female" && akanFemaleNames === [0]) {
-                return results ("Your Akan Name is " + akanFemaleNames);
-                }
-                else if (inputValue === 1 && genderValue === "Female" && akanFemaleNames === [1]) {
-                return results("Your Akan Name is " + akanFemaleNames);
-                }
-                else if (inputValue === 2 && genderValue === "Female" && akanFemaleNames === [2]) {
-                return results("Your Akan Name is " + akanFemaleNames);
-                }
-                else if (inputValue === 3 && genderValue === "Female" && akanFemaleNames === [3]) {
-                return results("Your Akan Name is " + akanFemaleNames);
-                }
-                else if (inputValue === 4 && genderValue === "Female" && akanFemaleNames === [4]) {
-                return results("Your Akan Name is " + akanFemaleNames);
-                }
-                else if (inputValue === 5 && genderValue === "Female" && akanFemaleNames === [5]) {
-                return results("Your Akan Name is " + akanFemaleNames);
-                }
-                else if (inputValue === 6 && genderValue === "Female" && akanFemaleNames === [6]) {
-                return results("Your Akan Name is " + akanFemaleNames);
-                }
-            }
-        </script>
     </div>    
 </body>
 </html>
