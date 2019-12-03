@@ -58,6 +58,15 @@
                 if (genderInput == ""){
                     alert("Please Select Your Gender");return
                 };
+                //subdivided the yearInput Into 4 segments and created its variables
+                //the centuryHalf calculates the century half thats the first part
+                var centuryHalf =(yearInput.slice(0,2)/4 - 2*yearInput.slice(0,2) -1);
+                //the yearHalf calculates the second part of the year
+                var yearHalf = (yearInput.slice(-2) /4 );
+                // the month half calcuates the month 
+                var monthHalf = (26 * (month +1) / 10);
+                // the dayOfTheWeek calculates the day of the week by adding the century half,yearandmonth and finding the modulos of 7
+                var dayOfTheWeek = (parseInt(centuryHalf)+parseInt(yearHalf)+parseInt(monthHalf)) % 7;
             </script>
         </div>
     </div>    
