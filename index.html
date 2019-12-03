@@ -23,7 +23,7 @@
                 Akan Name is a naming system in ghana where the First Name is a "Day Name" 
                 meaning like Sunday is Kwasi, Monday is Kwadwo etc.
             </p>
-            <form name="form" onsubmit="return akanName()">
+            <form class="myform" name="form" onsubmit="return akanName()">
                 Enter Day:<br>
                 <input type="number" name="date" min="1" max="31"><br>
                 Enter Month:<br>
@@ -100,6 +100,7 @@
                 if(dayOfTheWeek == 7){
                     alert("You Were Born On a " +day[6]+ " Click To View Your Akan Name");
                 }
+                
                 //created an array of Male names
                 akanMaleNames = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
                 if(dayOfTheWeek ==1 && genderInput =="Male"){
@@ -123,6 +124,7 @@
                 if(dayOfTheWeek ==7 && genderInput =="Male"){
                     alert("Your Akan Name Is "  +akanMaleNames[6]);
                 }
+
                 //created an array of the female names
                 akanFemaleNames = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
                 if (dayOfTheWeek == 1 && genderInput == "Female"){
