@@ -8,6 +8,9 @@ user to input the date he/she was born then the month and then the year. Upon cl
 the submit button it will call a javascript function to do the calculation to find out 
 the exact date you were born.
 
+## WEBSITE
+https://joekahora.github.io/Akan-Names/
+
 # AUTHOR INFO
 Joel Kahora 
 gachau.joel@gmail.com
