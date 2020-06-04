@@ -41,73 +41,73 @@ function akanName(){
     day = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
     //converted the array index to match that of the day of the week
-    if(dayOfTheWeek == 1){
+    if(dayOfTheWeek === 1){
         alert("You Were Born On a " +day[0]+ " Click To View Your Akan Name");
     }
-    if(dayOfTheWeek == 2){
+    if(dayOfTheWeek === 2){
         alert("You Were Born On a " +day[1]+ " Click To View Your Akan Name");
     }
-    if(dayOfTheWeek == 3){
+    if(dayOfTheWeek === 3){
         alert("You Were Born On a " +day[2]+ " Click To View Your Akan Name");
     }
-    if(dayOfTheWeek == 4){
+    if(dayOfTheWeek === 4){
         alert("You Were Born On a " +day[3]+ " Click To View Your Akan Name");
     }
-    if(dayOfTheWeek == 5){
+    if(dayOfTheWeek === 5){
         alert("You Were Born On a " +day[4]+ " Click To View Your Akan Name");
     }
-    if(dayOfTheWeek == 6){
+    if(dayOfTheWeek === 6){
         alert("You Were Born On a " +day[5]+ " Click To View Your Akan Name");
     }
-    if(dayOfTheWeek == 7){
+    if(dayOfTheWeek === 7){
         alert("You Were Born On a " +day[6]+ " Click To View Your Akan Name");
     }
 
     //created an array of Male names
     akanMaleNames = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
-    if(dayOfTheWeek ==1 && genderInput =="Male"){
+    if(dayOfTheWeek === 1 && genderInput === "Male"){
         alert("Your Akan Name Is " +akanMaleNames[0]);
     }
-    if(dayOfTheWeek ==2 && genderInput =="Male"){
+    if(dayOfTheWeek === 2 && genderInput === "Male"){
         alert("Your Akan Name Is "  +akanMaleNames[1]);
     }
-    if(dayOfTheWeek ==3 && genderInput =="Male"){
+    if(dayOfTheWeek === 3 && genderInput === "Male"){
         alert("Your Akan Name Is " +akanMaleNames[2]);
     }
-    if(dayOfTheWeek ==4 && genderInput =="Male"){
+    if(dayOfTheWeek === 4 && genderInput === "Male"){
         alert("Your Akan Name Is "  +akanMaleNames[3]);
     }
-    if(dayOfTheWeek ==5 && genderInput =="Male"){
+    if(dayOfTheWeek === 5 && genderInput === "Male"){
         alert("Your Akan Name Is "  +akanMaleNames[4]);
     }
-    if(dayOfTheWeek ==6 && genderInput =="Male"){
+    if(dayOfTheWeek === 6 && genderInput === "Male"){
         alert("Your Akan Name Is "  +akanMaleNames[5]);
     }
-    if(dayOfTheWeek ==7 && genderInput =="Male"){
+    if(dayOfTheWeek === 7 && genderInput === "Male"){
         alert("Your Akan Name Is "  +akanMaleNames[6]);
     }
 
     //created an array of the female names
     akanFemaleNames = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
-    if (dayOfTheWeek == 1 && genderInput == "Female"){
+    if (dayOfTheWeek === 1 && genderInput === "Female"){
         alert("Your Akan Name Is " + akanFemaleNames[0]);
     }
-    if (dayOfTheWeek == 2 && genderInput == "Female"){
+    if (dayOfTheWeek === 2 && genderInput === "Female"){
         alert("Your Akan Name Is " + akanFemaleNames[1]);
     }
-    if (dayOfTheWeek == 3 && genderInput == "Female"){
+    if (dayOfTheWeek === 3 && genderInput === "Female"){
         alert("Your Akan Name Is " + akanFemaleNames[2]);
     }
-    if (dayOfTheWeek == 4 && genderInput == "Female"){
+    if (dayOfTheWeek === 4 && genderInput === "Female"){
         alert("Your Akan Name Is " + akanFemaleNames[3]);
     }
-    if (dayOfTheWeek == 5 && genderInput == "Female"){
+    if (dayOfTheWeek === 5 && genderInput === "Female"){
         alert("Your Akan Name Is " + akanFemaleNames[4]);
     }
-    if (dayOfTheWeek == 6 && genderInput == "Female"){
+    if (dayOfTheWeek === 6 && genderInput === "Female"){
         alert("Your Akan Name Is " + akanFemaleNames[5]);
     }
-    if (dayOfTheWeek == 7 && genderInput == "Female"){
+    if (dayOfTheWeek === 7 && genderInput === "Female"){
         alert("Your Akan Name Is " + akanFemaleNames[6]);
     }
 }
